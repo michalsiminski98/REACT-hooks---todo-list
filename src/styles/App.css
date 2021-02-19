@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #d6d6d6;
+  font-family: arial;
+  overflow-x: hidden;
+}
+::placeholder {
+  color: rgb(221, 221, 221);
+}
+button {
+  cursor: pointer;
+}
+
+.inputWrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 10px 0;
+  height: 35px;
+  width: 100vw;
+  background-color: #ececec;
+}
+
+.inputWrapper > p {
+  margin: 0 7px;
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.addInput {
+  padding: 5px 20px;
+  width: 250px;
+  height: 25px;
+  font-size: 20px;
+  background-color: #16a8f4;
+  color: white;
+  border: 1px solid #585858;
+  border-radius: 20px;
+}
+
+.timeInput {
+  border-radius: 5px;
+  border: 1px solid #585858;
+  margin: 0 5px;
+}
+
+.fa-plus {
+  color: #16a8f4;
+  font-size: 2rem;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.fa-plus:hover {
+  color: #0b720b;
+}
+
+.nameWrapper {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #dddddd;
+  box-shadow: 0px 0px 16px 7px rgba(124, 124, 124, 0.24);
+}
+
+h1 {
+  color: #0d1117;
+  text-align: center;
+}
+
+ul {
+  width: 40%;
+  margin: 100px auto;
+  list-style-type: none;
+  min-height: 500px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: #d6d6d6;
+  box-shadow: 0px 0px 16px 7px rgba(146, 146, 146, 0.58);
+}
+li {
+  color: #000000;
+  font-size: 28px;
+  padding: 10px 0;
+  margin: 0 20px;
+  flex-basis: 100%;
+  box-shadow: 0 4px 2px -2px rgb(177, 177, 177);
+}
+
+.fa-check-circle,
+.fa-trash {
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: 0.2s;
+}
+.fa-check-circle:hover {
+  color: #0b720b;
+}
+.fa-trash:hover {
+  color: rgb(184, 13, 13);
+}
