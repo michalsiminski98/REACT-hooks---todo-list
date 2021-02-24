@@ -8,17 +8,17 @@ const App = () => {
 
     const [taskID, setTaskID] = useState(0);
     const [inputValue, setInputValue] = useState('');
-    const [toDoList, setToDoList] = useState([{id:123,value:'asd'}]);
+    const [toDoList, setToDoList] = useState([{id:123,value:'asd'},{id:333,value:'as2'}]);
 
     const handleInputOnChange = e => {
         setInputValue(e.target.value);
     }
 
-    const handleAddOnClick = () => {
-        setToDoList(toDoList + {id:taskID, value:inputValue});
-        setTaskID(taskID + 1);
-        setInputValue('');
-    };
+        useEffect(() => {
+            setToDoList(toDoList + {id:taskID, value:inputValue});
+            setTaskID(taskID + 1);
+            setInputValue('');
+        }, []);
 
     const handleDeleteTask = (e) => {
         console.log(e);
@@ -35,18 +35,17 @@ const App = () => {
             <input type="time" className="timeInput" ></input>
             <p>to</p>
             <input type="time" className="timeInput"></input>
-            <i onClick={handleAddOnClick}className="fas fa-plus"></i>
+            <i className="fas fa-plus"></i>
         </div>
         <ul>
             {
-            toDoList.map( task => {
-            // <Task
-            // id={task.id}
-            // content={task.value}
-            // deleteTask={handleDeleteTask.bind(this, task.id)}
-            // />
-            <div>asd</div>
-        })}
+            toDoList.map( task => (
+            <Task
+            id={task.id}
+            content={task.value}
+            deleteTask={handleDeleteTask.bind(this, task.id)}
+            />
+            ))}
         </ul>
         </>
         )
