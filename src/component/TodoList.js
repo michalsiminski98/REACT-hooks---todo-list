@@ -5,7 +5,7 @@ import Task from './Task.js';
 
 const TaskList = () => {
 
-    const [list, setList] = useState([{id:1, value:'kupsko strzelic'},{id:2, value:'kup ven'}]);
+    const [list, setList] = useState([{id:1, value:'zxcxzczxc'},{id:2, value:'kup ven'}]);
 
     const handleDelete = (id) => {
         const newList = list.filter(item => item.id !== id);
